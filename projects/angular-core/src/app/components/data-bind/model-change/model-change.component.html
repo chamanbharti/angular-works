@@ -1,0 +1,8 @@
+Name:
+<input type="text" name="name" ngModel (ngModelChange)="nameChanged($event)">
+<br>
+<input type="text" name="email" [(ngModel)]="email">
+<br>
+{{email}}
+<br>
+<input [(ngModel)]="firstName" (ngModelChange)="firstNameChanged($event)"/>

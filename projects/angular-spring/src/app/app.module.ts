@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
@@ -18,13 +18,17 @@ import { LoginoutComponent } from './loginout/loginout.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { HttpInterceptorService } from './http-interceptor.service';
-import { CommonModule } from '@angular/common';
 import { ListuserComponent } from './user/listuser/listuser.component';
 import { UserFormComponent } from './user/user-form/user-form.component';
 import { UserService } from './shared/user.service';
 import { StudentComponent } from './student/student/student.component';
 import { ProductComponent } from './product/product/product.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { AdminComponent } from './bike/admin/admin.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './bike/home/home.component';
+import { ViewRegistrationComponent } from './bike/view-registration/view-registration.component';
+import { CallbackComponent } from './bike/callback/callback.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,29 +44,34 @@ import { ProductListComponent } from './product/product-list/product-list.compon
     UserFormComponent,
     StudentComponent,
     ProductComponent,
-    ProductListComponent
+    ProductListComponent,
+    AdminComponent,
+    HomeComponent,
+    ViewRegistrationComponent,
+    CallbackComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     //material module
     MatFormFieldModule,
     MatInputModule,
     MatNativeDateModule,
-    MatDatepickerModule,
-    CommonModule
+    MatDatepickerModule
   ],
   providers: [
     UserService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpInterceptorService,
-      //useClass: EmployeeService,
-      multi: true
-    }
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: HttpInterceptorService,
+    //   //useClass: EmployeeService,
+    //   multi: true
+    // }
   ],
   bootstrap: [AppComponent]
 })

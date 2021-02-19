@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { DataBindingRoutingModule } from './components/data-bind/data-binding-routing.module';
+import { DataBindingModule } from './components/data-bind/data-binding.module';
+
 
 @NgModule({
   declarations: [
@@ -10,7 +15,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
+    DataBindingModule,
+    DataBindingRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,4 @@
+<h2>Example 1</h2>
+<input type="text" [value]="name" (input)="name=$event.target.value">
+<p> You entered {{name}}</p>
+<button (click)="clearName()">Clear</button>
