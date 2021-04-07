@@ -1,3 +1,13 @@
+To Create New Angular App
+ng g application app-name
+     Or
+ng generate application app-name
+
+To run angular application
+ng s --project=app-name
+     Or
+ng serve --project=app-name
+
 # AngularWorks2021
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.

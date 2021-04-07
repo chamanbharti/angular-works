@@ -1,5 +1,23 @@
-export class Product{
+// export class Product{
+//     id: number;
+//     name: string;
+//     price: string
+// }
+/* Defines the product entity */
+export interface Product {
     id: number;
-    name: string;
-    price: string
-}
+    productName: string;
+    productCode: string;
+    category: string;
+    tags?: string[];
+    releaseDate: string;
+    price: number;
+    description: string;
+    starRating: number;
+    imageUrl: string;
+  }
+
+  export interface ProductResolved {
+    product: Product;
+    error?: any;
+  }

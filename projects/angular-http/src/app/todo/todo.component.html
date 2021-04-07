@@ -1,0 +1,18 @@
+
+<!-- <div >
+    Enter<input type="text" (click)="createData(todo)" #todo>
+<button>Save</button>
+You have entered:{{todo.value}}
+</div> -->
+
+
+<ul class="list-group">
+    <li class="list-item" *ngFor="let todo of todos">
+        ID:{{todo.id}}<br>
+        UserID:{{todo.userId}}<br>
+        Title:{{todo.title}}<br>
+        Completed:{{todo.completed}}<br>
+    </li>
+</ul>
+
+<!-- <button (click)="fetch()">Fetch Data</button> -->

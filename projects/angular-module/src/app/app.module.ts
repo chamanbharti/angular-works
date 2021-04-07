@@ -28,7 +28,7 @@ import { CustomPreloadingService } from './part-0/custom-preloading.service';
     NotFoundRoutingModule//this must be called last, because it contains not-found component
   ],
   providers: [
-    CustomPreloadingService
+   // CustomPreloadingService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

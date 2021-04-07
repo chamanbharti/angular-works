@@ -1408,6 +1408,357 @@
           }
         }
       }
+    },
+    "authentication-authorization": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/authentication-authorization",
+      "sourceRoot": "projects/authentication-authorization/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/authentication-authorization",
+            "index": "projects/authentication-authorization/src/index.html",
+            "main": "projects/authentication-authorization/src/main.ts",
+            "polyfills": "projects/authentication-authorization/src/polyfills.ts",
+            "tsConfig": "projects/authentication-authorization/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/authentication-authorization/src/favicon.ico",
+              "projects/authentication-authorization/src/assets"
+            ],
+            "styles": [
+              "projects/authentication-authorization/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/authentication-authorization/src/environments/environment.ts",
+                  "with": "projects/authentication-authorization/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "authentication-authorization:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "authentication-authorization:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "authentication-authorization:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/authentication-authorization/src/test.ts",
+            "polyfills": "projects/authentication-authorization/src/polyfills.ts",
+            "tsConfig": "projects/authentication-authorization/tsconfig.spec.json",
+            "karmaConfig": "projects/authentication-authorization/karma.conf.js",
+            "assets": [
+              "projects/authentication-authorization/src/favicon.ico",
+              "projects/authentication-authorization/src/assets"
+            ],
+            "styles": [
+              "projects/authentication-authorization/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/authentication-authorization/tsconfig.app.json",
+              "projects/authentication-authorization/tsconfig.spec.json",
+              "projects/authentication-authorization/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/authentication-authorization/e2e/protractor.conf.js",
+            "devServerTarget": "authentication-authorization:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "authentication-authorization:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "angular-file-handling": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/angular-file-handling",
+      "sourceRoot": "projects/angular-file-handling/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/angular-file-handling",
+            "index": "projects/angular-file-handling/src/index.html",
+            "main": "projects/angular-file-handling/src/main.ts",
+            "polyfills": "projects/angular-file-handling/src/polyfills.ts",
+            "tsConfig": "projects/angular-file-handling/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/angular-file-handling/src/favicon.ico",
+              "projects/angular-file-handling/src/assets"
+            ],
+            "styles": [
+              "projects/angular-file-handling/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/angular-file-handling/src/environments/environment.ts",
+                  "with": "projects/angular-file-handling/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angular-file-handling:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "angular-file-handling:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angular-file-handling:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-file-handling/src/test.ts",
+            "polyfills": "projects/angular-file-handling/src/polyfills.ts",
+            "tsConfig": "projects/angular-file-handling/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-file-handling/karma.conf.js",
+            "assets": [
+              "projects/angular-file-handling/src/favicon.ico",
+              "projects/angular-file-handling/src/assets"
+            ],
+            "styles": [
+              "projects/angular-file-handling/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-file-handling/tsconfig.app.json",
+              "projects/angular-file-handling/tsconfig.spec.json",
+              "projects/angular-file-handling/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/angular-file-handling/e2e/protractor.conf.js",
+            "devServerTarget": "angular-file-handling:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-file-handling:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "serverless-with-firebase-angularfire": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/serverless-with-firebase-angularfire",
+      "sourceRoot": "projects/serverless-with-firebase-angularfire/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/serverless-with-firebase-angularfire",
+            "index": "projects/serverless-with-firebase-angularfire/src/index.html",
+            "main": "projects/serverless-with-firebase-angularfire/src/main.ts",
+            "polyfills": "projects/serverless-with-firebase-angularfire/src/polyfills.ts",
+            "tsConfig": "projects/serverless-with-firebase-angularfire/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/serverless-with-firebase-angularfire/src/favicon.ico",
+              "projects/serverless-with-firebase-angularfire/src/assets"
+            ],
+            "styles": [
+              "projects/serverless-with-firebase-angularfire/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/serverless-with-firebase-angularfire/src/environments/environment.ts",
+                  "with": "projects/serverless-with-firebase-angularfire/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "serverless-with-firebase-angularfire:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "serverless-with-firebase-angularfire:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "serverless-with-firebase-angularfire:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/serverless-with-firebase-angularfire/src/test.ts",
+            "polyfills": "projects/serverless-with-firebase-angularfire/src/polyfills.ts",
+            "tsConfig": "projects/serverless-with-firebase-angularfire/tsconfig.spec.json",
+            "karmaConfig": "projects/serverless-with-firebase-angularfire/karma.conf.js",
+            "assets": [
+              "projects/serverless-with-firebase-angularfire/src/favicon.ico",
+              "projects/serverless-with-firebase-angularfire/src/assets"
+            ],
+            "styles": [
+              "projects/serverless-with-firebase-angularfire/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/serverless-with-firebase-angularfire/tsconfig.app.json",
+              "projects/serverless-with-firebase-angularfire/tsconfig.spec.json",
+              "projects/serverless-with-firebase-angularfire/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/serverless-with-firebase-angularfire/e2e/protractor.conf.js",
+            "devServerTarget": "serverless-with-firebase-angularfire:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "serverless-with-firebase-angularfire:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "cli": {
