@@ -2,7 +2,7 @@ To Create New Angular App
 ng g application app-name
      Or
 ng generate application app-name
-
+`11
 To run angular application
 ng s --project=app-name
      Or

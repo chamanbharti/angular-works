@@ -1,0 +1,14 @@
+.header{
+    height: 40px;
+}
+.content{
+    min-height: 500px;
+}
+
+.main-content{
+ min-height: 500px;
+ border: 1px solid #eee;
+}
+.footer{
+    height: 40px;
+}

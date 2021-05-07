@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <h1>Alert Box</h1>
+        <script>
+            function msg(){
+                alert('Hello Alert Box');
+            }
+        </script>
+
+        <input type="button" value="click" onclick="msg()">
+
+        <h1>Confirm Box</h1>
+         <script>
+             function message(){
+                 var v = confirm('Are you sure?');
+                 if(v == true){
+                     alert('Ok');
+                 }else {
+                     alert('Cancel');
+                 }
+             }
+         </script>
+         <input type="button" value="delete record" onclick="message()"/>  
+
+         <h1>Prompt Box</h1>
+         <script>
+             function msg(){
+                var v = prompt('Who are you?');
+                alert('I am ' + v);
+             }
+         </script>
+        
+         <input type="button" value="click" onclick="msg()"/>  
+
+         <h1>Open Box</h1>
+         <script type="text/javascript">  
+            function msg(){  
+             open("http://www.javatpoint.com");  
+            }  
+            </script>  
+            <input type="button" value="javatpoint" onclick="msg()"/>  
+
+            <h1>setTimeOut</h1>
+            <script>
+                function msg(){
+                    setTimeout(
+                        function() {
+                            alert('Hello Timeout');
+                        }
+                    , 2000);
+                }
+            </script>
+            <input type="button" value="click" onclick="msg()"/>  
+    </body>
+</html>
