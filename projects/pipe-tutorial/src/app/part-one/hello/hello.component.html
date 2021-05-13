@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <input type="text" [(ngModel)]="filteredStatus">
+      <br>
+      <button class="btn btn-primary" (click)="onAddServer()">Add Server</button>
+      <br><br>
+      <h2>App Status: {{ appStatus | async}}</h2>
+      <hr>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let server of servers | filter:filteredStatus:'status'"
+          [ngClass]="getStatusClasses(server)">
+          <span
+            class="badge">
+            {{ server.status }}
+          </span>
+          <!-- <strong>{{ server.name | shorten }}</strong> | -->
+          <!-- <strong>{{ server.name | shorten: 15 }}</strong> | -->
+
+          <!-- {{ server.instanceType | uppercase }} | -->
+          <!--Aug 9, 1920-->
+          <!-- {{ server.started | date}} -->
+
+          <!--Monday, August 9, 1920-->
+          <!-- {{ server.started | date: 'fullDate'}} -->
+
+           <!--MONDAY, AUGUST 9, 1920-->
+           {{ server.started | date: 'fullDate' | uppercase}}
+        </li>
+        <li>Today {{today | date : 'G'}}</li>
+      </ul>
+      <p>Object</p>
+      <div *ngFor="let item of object | keyvalue">
+        {{item.key}}:{{item.value}}
+      </div>
+      <p>Map</p>
+    <div *ngFor="let item of map | keyvalue">
+      {{item.key}}:{{item.value}}
+    </div>
+    </div>
+  </div>
+</div>

@@ -36,10 +36,10 @@ export class ProductComponent implements OnInit {
    }
  ];
  // for save product
- product = new Product();
+ product = new this.product();
  productDisplay = [];
  constructor(private productService: ProductService, private router: Router){}
- ngOnInit(){
+ ngOnInit(): void {
   this.onFetchProduct();
  }
 //  onAddProduct(id, name, price) {

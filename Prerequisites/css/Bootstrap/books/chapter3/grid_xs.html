@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+  <script src="../../../../../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <title>Document</title>
+
+  <style>
+      .sample{
+        font-size: 150%;
+        border: 1px dotted silver;
+        padding: 15px;
+      }
+      [class^='col'] {
+        border: 1px solid blue;
+      }
+
+      body {
+        margin: 50px;
+      }
+  </style>
+</head>
+<body>
+  <div class="container sample">
+
+    <div class="row">
+      <div class="col-sm-12 col-md-8">12 or 8</div>
+      <div class="col-sm-6 col-md-4">6 or 4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+      <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+      <div class="col-sm-6 col-md-4">50% or 33.4%</div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">.col-sm-6</div>
+      <div class="col-sm-6">.col-sm-6</div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-8">
+        Small: 12 Tablet: 6 Large: 8
+        </div>
+        <div class="col-xs-6 col-md-4">
+        Small: 6 Large: 4
+        </div>
+    </div>
+
+      <div class="row">
+        <div class="col-xs-6 col-sm-4">A Small: 6 Tablet: 4</div>
+        <div class="col-xs-6 col-sm-4">B Small: 6 Tablet: 4</div>
+      <!-- Optional: Wrap at different height -->
+        <div class="clearfix visible-xs-block"></div>
+        <div class="col-xs-6 col-sm-4">C Small: 6 Tablet: 4</div>
+      </div>
+
+  </div>
+</body>
+</html>

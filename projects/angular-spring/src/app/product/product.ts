@@ -17,7 +17,7 @@ export interface Product {
     imageUrl: string;
   }
 
-  export interface ProductResolved {
-    product: Product;
-    error?: any;
-  }
+  // export interface ProductResolved {
+  //   product: Product;
+  //   error?: any;
+  // }

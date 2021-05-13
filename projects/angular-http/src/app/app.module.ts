@@ -18,6 +18,7 @@ import { HttpJsonpComponent } from './http-methods/http-jsonp/http-jsonp.compone
 import { HttpOptionsComponent } from './http-methods/http-options/http-options.component';
 import { LoggingInterceptor } from './interceptor/logging-interceptor';
 import { TokenInterceptor } from './interceptor/token-interceptor';
+import { PartOneModule } from './part-one/part-one.module';
 
 
 @NgModule({
@@ -38,11 +39,12 @@ import { TokenInterceptor } from './interceptor/token-interceptor';
   imports: [
     BrowserModule,
     HttpClientModule,
+    PartOneModule,
     AppRoutingModule
   ],
   providers: [
     // httpInterceptorProviders
-    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
+    // {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../../../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+      .sample {
+        font-size: 150%;
+        border: 1px dotted silver;
+        padding: 15px;
+      }
+      [class^='col'] {
+        border: 1px solid blue;
+      }
+      body {
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container sample">
+      <h1>Order Column</h1>
+      <div class="row">
+        <div class="col-md-9 push-md-3">9 + 3 right</div>
+        <div class="col-md-3 pull-md-9">3 + 9 left</div>
+      </div>
+    </div>
+  </body>
+</html>

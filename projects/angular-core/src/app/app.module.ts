@@ -17,10 +17,10 @@ import { LifeCycleHooksModule } from './components/life-cycle-hooks/life-cycle-h
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule,
-    AppRoutingModule,
+    LifeCycleHooksModule,
     DataBindingModule,
-    DataBindingRoutingModule
+    DataBindingRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
