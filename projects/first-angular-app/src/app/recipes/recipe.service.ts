@@ -8,7 +8,7 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
-
+/*
   private recipes: Recipe[] = [
     new Recipe(
       'Tasty Schnitzel',
@@ -26,9 +26,14 @@ export class RecipeService {
         new Ingredient('Meat', 1)
       ])
   ];
-
+*/
+private recipes: Recipe[] = [];
   constructor(private slService: ShoppingListService) {}
 
+  setRecipes(recipes: Recipe[]) {
+    this.recipes = recipes;
+    this.recipesChanged.next(this.recipes.slice());
+  }
   getRecipes() {
     return this.recipes.slice();
   }

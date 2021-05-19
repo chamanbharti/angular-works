@@ -6,8 +6,6 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './todo/todo.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { httpInterceptorProviders } from './interceptor';
-import { HttpHeadersComponent } from './http-headers/http-headers.component';
-import { HttpParamsComponent } from './http-params/http-params.component';
 import { HttpGetComponent } from './http-methods/http-get/http-get.component';
 import { HttpPostComponent } from './http-methods/http-post/http-post.component';
 import { HttpPutComponent } from './http-methods/http-put/http-put.component';
@@ -25,8 +23,6 @@ import { PartOneModule } from './part-one/part-one.module';
   declarations: [
     AppComponent,
     TodoComponent,
-    HttpHeadersComponent,
-    HttpParamsComponent,
     HttpGetComponent,
     HttpPostComponent,
     HttpPutComponent,

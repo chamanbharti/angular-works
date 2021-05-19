@@ -2,11 +2,12 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-http-params',
-  templateUrl: './http-params.component.html',
-  styleUrls: ['./http-params.component.css']
+  selector: 'app-params-two',
+  templateUrl: './params-two.component.html',
+  styleUrls: ['./params-two.component.css']
 })
-export class HttpParamsComponent implements OnInit {
+export class ParamsTwoComponent implements OnInit {
+
   todos: any;
   private url = 'https://jsonplaceholder.typicode.com/todos';
   constructor(private http: HttpClient) { }
@@ -43,37 +44,42 @@ export class HttpParamsComponent implements OnInit {
       * toString
   */
   getData(){
-    debugger
      //using HttpParams
-      // const httpParams = new HttpParams({
-      //   fromObject: {
-      //     userId: '2'
-      //   }
-      // });
-   //https://jsonplaceholder.typicode.com/todos?userId=2
-
-      // const httpParams = new HttpParams({
-      //   fromObject: {
-      //     userId: '2',
-      //     id: '27'
-      //   }
-      // });
+     /*
+      const httpParams = new HttpParams({
+        fromObject: {
+          userId: '2'
+        }
+      });
+      //https://jsonplaceholder.typicode.com/todos?userId=2
+      */
+   
+      /*
+      const httpParams = new HttpParams({
+        fromObject: {
+          userId: '2',
+          id: '27'
+        }
+      });
    //https://jsonplaceholder.typicode.com/todos?userId=2&id=27
+   */
+    
+   /*
+   const httpParams = new HttpParams({
+    fromObject: {
+      userId: '1',
+      id: '13',
+      completed:'false'
+    }
+  });
 
-  //  const httpParams = new HttpParams({
-  //   fromObject: {
-  //     userId: '1',
-  //     id: '13',
-  //     completed:'false'
-  //   }
-  // });
-
-  // const httpParams = new HttpParams({
-  //   fromString: `userId=${1}&id=${13}&completed=${false}`
-  // });
-
+  const httpParams2 = new HttpParams({
+    fromString: `userId=${1}&id=${13}&completed=${false}`
+  });
    //https://jsonplaceholder.typicode.com/todos?userId=1&id=13&completed=false
+  */
 
+   
     const httpParams = new HttpParams({
     fromObject: {
       userId: '1',
@@ -92,10 +98,11 @@ export class HttpParamsComponent implements OnInit {
   httpHeaders = httpHeaders.set('chaman-bharti', '1129');
 
   // https://jsonplaceholder.typicode.com/todos?userId=1&id=13&id=14&completed=false
-    this.http.get(this.url,{headers: httpHeaders,params: httpParams})
+    this.http.get(this.url,{headers: httpHeaders, params: httpParams})
     .subscribe( response => {
       console.log(response);
       this.todos = response;
     });
   }
+  
 }

@@ -2,19 +2,18 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-http-headers',
-  templateUrl: './http-headers.component.html',
-  styleUrls: ['./http-headers.component.css']
+  selector: 'app-headers-two',
+  templateUrl: './headers-two.component.html',
+  styleUrls: ['./headers-two.component.css']
 })
-export class HttpHeadersComponent implements OnInit {
+export class HeadersTwoComponent implements OnInit {
+
   todos: any;
   private url = 'https://jsonplaceholder.typicode.com/todos';
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    // this.getData();
-    // this.getData2();
-    this.getData3();
+    this.getData();
   }
 
   /*
@@ -44,7 +43,8 @@ export class HttpHeadersComponent implements OnInit {
       * Set
       * delete
   */
- /*
+
+/*
  getData(){
    const httpHeaders = new HttpHeaders({
      'content-type': 'application/json',
@@ -59,8 +59,8 @@ export class HttpHeadersComponent implements OnInit {
  }
  */
 
- /*
-getData2(){
+/*
+getData(){
   let httpHeaders = new HttpHeaders({
     'content-type': 'application/json',
     'Authorization': 'chamanbharti'
@@ -75,10 +75,10 @@ getData2(){
     this.todos = response;
   });
 }
-
 */
 
-getData3(){
+
+getData(): void {
   let httpHeaders = new HttpHeaders({
     'content-type': 'application/json',
     'Authorization': 'chamanbharti',
@@ -90,7 +90,6 @@ getData3(){
   httpHeaders = httpHeaders.set('chaman-bharti', '1129');
   let time = httpHeaders.get('timeOutSeconds');
   if(time === '3000'){
-    debugger
     // at the api - we can check if  Authorization is empty - redirect user to login screen
     // some custom logic
     httpHeaders = httpHeaders.set('Authorization','test');
@@ -101,4 +100,6 @@ getData3(){
     this.todos = response;
   });
 }
+
+
 }
